@@ -55,11 +55,11 @@ def run_scraper(url):
 
 st.set_page_config(
     page_title="Scraper de Notícias",
-    page_icon="📰",
+    page_icon="🗣️",
     layout="centered"
 )
 
-st.title("📰 Scraper de Notícias")
+st.title("🗣️ Scraper de Notícias")
 st.write("Selecione um portal e visualize as **principais manchetes**.")
 
 site = st.selectbox("Portal de notícias:", list(NEWS_SITES.keys()))
