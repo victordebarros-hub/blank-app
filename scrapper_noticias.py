@@ -70,5 +70,8 @@ if st.button("Coletar Manchetes"):
         headlines = run_scraper(url)
 
     st.subheader(f"Resultados — {site}")
-    for h in headlines:
-        st.write(f"- **{h}**")
+     for text, link in headlines:
+        if link:
+            st.markdown(f"- **[{text}]({link})**")
+        else:
+            st.markdown(f"- **{text}**")
