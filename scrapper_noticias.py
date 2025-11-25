@@ -33,7 +33,7 @@ async def scrape_headlines(url):
 
         soup = BeautifulSoup(html, "html.parser")
 
-        selectors = ["h1", "h2", "h3", ".headline", ".title"]
+        selectors = ["h1", "h2", "h3", "h4", ".headline", ".title"]
 
         headlines = []
 
@@ -44,7 +44,7 @@ async def scrape_headlines(url):
                     headlines.append(text)
 
         unique = list(dict.fromkeys(headlines))
-        return unique[:5] if unique else ["Nenhuma manchete encontrada."]
+        return unique[:10] if unique else ["Nenhuma manchete encontrada."]
 
 
 def run_scraper(url):
@@ -60,7 +60,7 @@ st.set_page_config(
 )
 
 st.title("📰 Scraper de Notícias")
-st.write("Selecione um portal e visualize as **5 principais manchetes**.")
+st.write("Selecione um portal e visualize as **10 principais manchetes**.")
 
 site = st.selectbox("Portal de notícias:", list(NEWS_SITES.keys()))
 
