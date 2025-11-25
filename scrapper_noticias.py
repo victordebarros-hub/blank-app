@@ -7,10 +7,10 @@ import streamlit as st
 # --------------------- LISTA DE SITES ---------------------
 NEWS_SITES = {
     "G1": "https://g1.globo.com/",
-    "UOL Notícias": "https://uol.com.br/",
+    "UOL": "https://uol.com.br/",
     "BBC Brasil": "https://www.bbc.com/portuguese",
     "CNN Brasil": "https://www.cnnbrasil.com.br/",
-    "Folha de S.Paulo": "https://www.folha.uol.com.br/",
+    "Folha de S. Paulo": "https://www.folha.uol.com.br/",
     "Pipeline": "https://pipelinevalor.globo.com/"
 }
 
